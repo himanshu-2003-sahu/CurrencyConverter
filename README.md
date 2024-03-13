@@ -1,80 +1,32 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+Currency Converter
 
-public class Currencyconverter {
+Currency Converter is a Java Swing application that allows users to convert between different currencies based on current exchange rates.
 
-    public static void converter() {
+*Features
+Convert between major currencies such as USD, EUR, GBP, etc.
+Simple and intuitive graphical user interface (GUI).
+Real-time conversion using hardcoded exchange rates (for demonstration purposes).
 
-        JFrame f = new JFrame("CONVERTER");
-        JLabel l1, l2;
+*Getting Started
+To run the currency converter application, follow these steps:
 
-        JTextField t1, t2;
+Clone or download the repository to your local machine.
 
+bash
+Copy code
+ (https://github.com/himanshu-2003-sahu/CurrencyConverter/tree/main)
+Open the project in your favorite Java IDE.
+Build and run the CurrencyConverter.java file.
+The application window will open, allowing you to input the amount, select the currencies to convert from and to, and then click the "Convert" button to see the result.
 
-        JButton b1, b2, b3;
+*Dependencies
+This project does not have any external dependencies. It uses only core Java libraries and Swing for the graphical user interface.
 
-        l1 = new JLabel("Rupees:");
-        l1.setBounds(20, 40, 60, 30);
-        l2 = new JLabel("Dollars:");
-        l2.setBounds(170, 40, 60, 30);
-        t1 = new JTextField("0");
-        t1.setBounds(80, 40, 50, 30);
-        t2 = new JTextField("0");
-        t2.setBounds(240, 40, 50, 30);
+*Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
-        b1 = new JButton("INR");
-        b1.setBounds(50, 80, 60, 15);
-        b2 = new JButton("USD");
-        b2.setBounds(190, 80, 60, 15);
-        b3 = new JButton("close");
-        b3.setBounds(150, 150, 60, 30);
+*License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-        b1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                double d = Double.parseDouble(t1.getText());
-
-                double d1 = (d / 83.01);
-                String str1 = String.valueOf(d1);
-                t2.setText(str1);
-            }
-        });
-        b2.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                double d2 = Double.parseDouble(t2.getText());
-                double d3 = (d2 * 83.01);
-
-                String str2 = String.valueOf(d3);
-                t1.setText(str2);
-            }
-        });
-
-        b3.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                f.dispose();
-            }
-        });
-
-        f.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        });
-
-        f.add(l1);
-        f.add(t1);
-        f.add(l2);
-        f.add(t2);
-        f.add(b1);
-        f.add(b2);
-        f.add(b3);
-
-        f.setLayout(null);
-        f.setSize(400, 300);
-        f.setVisible(true);
-    }
-
-    public static void main(String args[]) {
-        converter();
-    }
-}
+*Acknowledgments
+This project was inspired by the need for a simple currency converter tool using Java Swing.
